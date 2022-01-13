@@ -23,12 +23,4 @@ public class UnionFind {
             parent[px] = py;
         }
     }
-
-    public int size() { // number of groups
-        int ans = 0;
-        for (int i = 0; i < parent.length; ++ i) {
-            if (i == parent[i]) ans ++;
-        }
-        return ans;
-    }
 }

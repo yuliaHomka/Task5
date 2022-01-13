@@ -27,7 +27,6 @@ public class PercolationStats {
                 int j = rng.nextInt(N) + 1;
                 percolation.open(i, j);
             }
-//            System.out.println("results = " + (double) percolation.getOpenCellsCount() / (nSquared));
             results[test] = ((double) percolation.getOpenCellsCount()) / (nSquared);
         }
 
@@ -52,7 +51,6 @@ public class PercolationStats {
                     if (percolation.percolates())
                         percolateCount++;
                 }
-//                System.out.println(((double) maxOpenCells) / (N * N) + "   " + ((double) percolateCount) / testsCount);
                 writer.printf(Locale.ROOT, "%.3f, %.3f\n", ((double) maxOpenCells) / (nSquared), ((double) percolateCount) / testsCount);
             }
         } catch (FileNotFoundException exception) {
